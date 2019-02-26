@@ -19,4 +19,9 @@ $(document).ready(function () {
             scrollTop: $(".merch").offset().top},
             'slow');
     })
+    $('#mdia').click(function () {
+        $('html,body').animate({
+            scrollTop: $(".med").offset().top},
+            'slow');
+    })
 });
