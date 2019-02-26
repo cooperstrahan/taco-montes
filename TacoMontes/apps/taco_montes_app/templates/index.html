@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bozeman's taco shop serving unique, made-from-scratch tacos, \
+    nachos, and freshly made salsas.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Taco Montes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% load staticfiles %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../static/script/script.js"></script>
+</head>
+<style >
+    * {
+        margin: 0px;
+        padding: 0px;
+        scroll-behavior: smooth;
+    }
+    .background {
+        background-color: lightgray;
+    }
+    .contain {
+        width: 90%;
+        margin: 0px auto;
+        text-align: center;
+    }
+    .size {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0px;
+        padding: 0px;
+    }
+    .fs {
+        margin: 0px auto;
+        text-align: center;
+        font-size: 0px;
+    }
+    .main {
+        margin: 0px auto;
+        border-radius: 50%;
+        position: absolute;
+        top: 20%;
+        left: 27.5%;
+    }
+    .mkw {
+        color: whitesmoke;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+    }
+    .container {
+        text-align: center;
+    }
+    .container, p {
+        margin-bottom: 0px;
+    }
+    .container, h5 {
+        margin-top: .5rem;
+    }
+    .left {
+        text-align: left;
+    }
+</style>
+<body>
+        <nav class="navbar navbar-dark bg-dark">
+            <ul class="nav">
+                <li class="nav-item">
+                <a id= "mnu" class="nav-link active mkw" href="#">Menu</a>
+                </li>
+                <li class="nav-item">
+                <a id="abt" class="nav-link active mkw" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                <a id="evnt" class="nav-link active mkw" href="#">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a id="mrch" class="nav-link active mkw" href="#">Media</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="background">
+            <div class="contain">
+                <img class="main" src="../static/cylceImg/Taco_Montes.jpg">
+                <div class="fs">
+                    {% for taco in file_list %}
+                    <img class="size" src="../static/img/{{taco}}" height="200px" width="20%">
+                    {% endfor %}
+                </div>
+                <div class="menu">
+                    <h2>Menu</h2>
+                    <h3>Taco Styles</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5>Santa Fe</h5>
+                                <p>Black bean corn salsa</p>
+                                <p>Avocado Ranch</p>
+                                <p>Tortilla strips</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5>Classic Street</h5>
+                                <p>Chimichurri</p>
+                                <p>Brunoise onion</p>
+                                <p>Cilantro</p>
+                                <p>Lime Wedge</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5>Fresco</h5>
+                                <p>Tomatillo pico</p>
+                                <p>Roasted habanero crema</p>
+                                <p>Queso fresco</p>
+                                <p>Pickled onion</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5>Baja</h5>
+                                <p>Lime infused cabbage</p>
+                                <p>Chili lime sour cream</p>
+                                <p>Jieama, cilantro</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5>Desperado</h5>
+                                <p>Lime infused cabbage</p>
+                                <p>Chipotle ranch</p>
+                                <p>Crispy onions</p>
+                                <p>Cilantro</p>
+                                <p>Lime wedge</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5>Korean</h5>
+                                <p>Bulgogi, kimchi</p>
+                                <p>sriracha aioli</p>
+                                <p>pickled veggies</p>
+                                <p>cilantro</p>
+                                <p>sesame seeds</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5>Thai-Rant</h5>
+                                <p>Lime infused cabbage</p>
+                                <p>Sweet chili sauce</p>
+                                <p>pickled carrot, scallion</p>
+                                <p>sesame seeds</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5>Curry</h5>
+                                <p>Lime infused cabbage</p>
+                                <p>Raita, cilantro</p>
+                                <p>Queso fresco</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5>Poutine</h5>
+                                <p>Sweet potato fries</p>
+                                <p>Cheese curds</p>
+                                <p>Beef gravy</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5>Jamaican</h5>
+                                <p>Lime infused cabbage</p>
+                                <p>Jerk sausage</p>
+                                <p>roasted red peppers</p>
+                                <p>chili lime sour cream</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5>Bobcat</h5>
+                                <p>Carmelized onions</p>
+                                <p>sauteed mushrooms</p>
+                                <p>roasted red peppers</p>
+                                <p>Avocado ranch</p>
+                                <p>Jack cheese</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Meats</h3>
+                    <table class="table table-borderless table-dark">
+                        <tr>
+                            <th></th>
+                            <th>Taco</th>
+                            <th>Nachos</th>
+                        </tr>
+                        <tr>
+                            <th>Chicken</th>
+                            <td>$3.50</td>
+                            <td>$6.50/$12</td>
+                        </tr>
+                        <tr>
+                            <th>Pork</th>
+                            <td>$3.50</td>
+                            <td>$6.50/$12</td>
+                        </tr>
+                        <tr>
+                            <th>Barbacoa</th>
+                            <td>$3.75</td>
+                            <td>$7/$13</td>
+                        </tr>
+                        <tr>
+                            <th>Steak</th>
+                            <td>$4</td>
+                            <td>$7.5/$14</td>
+                        </tr>
+                        <tr>
+                            <th>Pork belly</th>
+                            <td>$4</td>
+                            <td>$7.5/$14</td>
+                        </tr>
+                        <tr>
+                            <th>Shrimp</th>
+                            <td>$4</td>
+                            <td>$7.5/$14</td>
+                        </tr>
+                        <tr>
+                            <th>Tofu</th>
+                            <td>$3</td>
+                            <td>$6/$11</td>
+                        </tr>
+                        <tr>
+                            <th>Add a Fried Egg $1</th>
+                        </tr>
+                    </table>
+                    <h3>Nachos</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5>Montes</h5>
+                                <p>Pico de Gallo</p>
+                                <p>Chili lime sour cream</p>
+                                <p>Guacamole</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5>Santa Fe</h5>
+                                <p>Black bean corn salsa</p>
+                                <p>Avocado ranch</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5>Desperado</h5>
+                                <p>Lime infused cabbage</p>
+                                <p>Chipotle ranch</p>
+                                <p>Crispy onions, cilantro</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5>Fresco</h5>
+                                <p>Tomatillo pico</p>
+                                <p>roasted barbacoa crema</p>
+                                <p>Pickled onion</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5 style="display: inline-block;">Chorizo & Egg -</h5>
+                                <p style="display: inline-block;">Brunoise onions, cilantro -</p>
+                                <p style="display: inline-block;">$3.25</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5 style="display: inline-block;">Pork Verde -</h5>
+                                <p style="display: inline-block;">Tomatillo pico, queso fresco -</p>
+                                <p style="display: inline-block;">$3.25</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5 style="display: inline-block;">Barbacoa -</h5>
+                                <p style="display: inline-block;">Carmalized onions, red peppers -</p>
+                                <p style="display: inline-block;">$3.50</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5 style="display: inline-block;">Steak & Egg -</h5>
+                                <p style="display: inline-block;">Carmelized onions, jack cheese -</p>
+                                <p style="display: inline-block;">$4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5 style="display: inline-block;">Camote -</h5>
+                                <p style="display: inline-block;">Sweet potato, pico de gallo, roasted habanero crema -</p>
+                                <p style="display: inline-block;">$3.25</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Extras</h3>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5 style="display: inline-block;">Housemade Chips -</h5>
+                            <p style="display: inline-block;">$3.25</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5 style="display: inline-block;">Guacamole -</h5>
+                            <p style="display: inline-block;">side $.75/full $3</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5 style="display: inline-block;">Chili Con Queso -</h5>
+                            <p style="display: inline-block;">side $.75/full $3</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5 style="display: inline-block;">Homemade Salsa -</h5>
+                            <p style="display: inline-block;">side $.50/full $2</p>
+                            <p>Mild Roasted - Avocado Jalapeno - Pico de Gallo</p>
+                            <p>Habanero - Tomatillo Pico - DIABLO</p>
+                            <p>Black Bean Corn</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="about container">
+                        <h2>About Us</h2>
+                        <div class="row">
+                        <div class="col-sm left">
+                            <h4>Hours</h4>
+                            <p>Monday - Thursday: 11:00 AM - 4:00 PM</p>
+                            <p>Friday & Saturday: 11:00 AM - 4:00 PM, 10:00PM - 3:00 AM</p>
+                            <p>Sunday : CLOSED</p>
+                        </div>
+                        <div class="col-sm">
+                            <iframe width="80%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=815%20W%20College%20St%2C%20Ste%20A%2C%20Bozeman%2C%20MT&key={{key}}" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="event">
+                    <h2>Events</h2>
+                </div>
+                <div class="merch">
+                    <h2>Merch</h2>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
