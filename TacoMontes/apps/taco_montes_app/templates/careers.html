@@ -6,11 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Careers</title>
+    {% load staticfiles %}
 </head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        
+    }
+    body {
+        background: url("../static/OtherImg/bozeman2.jpg");  
+        width: 100%;
+        height: 100%;
+    }
+    .contain {
+        padding: 1%;
+        background-color: whitesmoke;
+    }
+    @media only screen and (max-width: 480px){
+        .fullscreen {
+            width: 100%;
+            height: 812px;
+        }
+    }
+    @media only screen and (min-width: 700px){
+        .partscreen {
+        margin: 2.5% auto;
+        width: 40%;
+        outline: 1px solid black;
+        padding: 4%;
+        }
+    @media only screen and (min-width: 900px){
+        .partscreen {
+        margin: 2.5% auto;
+        width: 30%;
+        outline: 1px solid black;
+        }
+    }
+</style>
 <body>
-    <div class="container">
-        <div class="row">
-            <form action="/sendResume" method="POST" enctype="multipart/form-data ">
+    <div class="background">
+        <div class="container-fluid contain fullscreen partscreen">
+            <h3>Resume Submission</h3>
+            <form action="/sendResume" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
                     <label>Name:</label>
@@ -22,7 +60,7 @@
                 </div>
                 <div class="form-group">
                     <label>Resume:</label>
-                    <input type="file" name="file_res">
+                    <input type="file" name="myfile">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

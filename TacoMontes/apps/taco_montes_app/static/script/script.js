@@ -9,11 +9,6 @@ $(document).ready(function () {
             scrollTop: $(".about").offset().top},
             'slow');
     })
-    $('#evnt').click(function () {
-        $('html,body').animate({
-            scrollTop: $(".event").offset().top},
-            'slow');
-    })
     $('#mrch').click(function () {
         $('html,body').animate({
             scrollTop: $(".merch").offset().top},

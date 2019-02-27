@@ -15,11 +15,10 @@ class UserManager(models.Manager):
             errors['email'] = 'Your email is required.'
         return errors
 
-
 class User(models.Model):
     name = models.CharField(max_length = 255)
     email = models.EmailField(max_length=255)
-    resume = models.FileField(upload_to='resume', null = True)
+    document = models.FileField(upload_to='resume/', null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = UserManager()
