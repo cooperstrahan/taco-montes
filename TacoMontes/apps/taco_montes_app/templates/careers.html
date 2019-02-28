@@ -21,7 +21,13 @@
     }
     .contain {
         padding: 1%;
-        background-color: whitesmoke;
+        background-color: rgba(245, 245, 245, 0.678);
+    }
+    .mkw {
+        color: white;
+    }
+    .right {
+        text-align: right;
     }
     @media only screen and (max-width: 480px){
         .fullscreen {
@@ -36,6 +42,7 @@
         outline: 1px solid black;
         padding: 4%;
         }
+    }
     @media only screen and (min-width: 900px){
         .partscreen {
         margin: 2.5% auto;
@@ -46,6 +53,13 @@
 </style>
 <body>
     <div class="background">
+        <nav class="navbar navbar-dark bg-dark right">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active mkw" href="/">Home</a>
+                </li>
+            </ul>
+        </nav>
         <div class="container-fluid contain fullscreen partscreen">
             <h3>Resume Submission</h3>
             <form action="/sendResume" method="POST" enctype="multipart/form-data">
